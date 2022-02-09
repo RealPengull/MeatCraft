@@ -4,11 +4,11 @@ license="Public Domain"
 
 [[mods]]
 modId="meatcraft"
-version="0.2.0"
+version="0.2.3"
 displayName="Meatcraft"
-credits="Pengull"
+credits="Pengull, NovisRail"
 displayURL="https://github.com/RealPengull/Meatcraft"
-authors="Pengull"
+authors="Pengull, NovisRail"
 description='''
 A modpack used for testing.
 '''
