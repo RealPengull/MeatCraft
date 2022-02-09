@@ -3,11 +3,11 @@ package com.pengull.meatcraft.item;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.AxeItem;
 
-public class ChickAxeItem extends PickaxeItem {
+public class ChickAxeItem extends AxeItem {
 	public ChickAxeItem() {
 		super(new Tier() {
 			public int getUses() {
