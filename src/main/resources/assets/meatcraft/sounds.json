@@ -1,0 +1,31 @@
+{
+  "fortnite_default_dance": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "meatcraft:fortnite-default-dance-earrape",
+        "stream": true
+      }
+    ]
+  },
+  "speedrun": {
+    "category": "hostile",
+    "subtitle": "subtitles.speedrun",
+    "sounds": [
+      {
+        "name": "meatcraft:speedrun",
+        "stream": false
+      }
+    ]
+  },
+  "bruh": {
+    "category": "neutral",
+    "subtitle": "subtitles.bruh",
+    "sounds": [
+      {
+        "name": "meatcraft:bruh-sound-effect-",
+        "stream": false
+      }
+    ]
+  }
+}

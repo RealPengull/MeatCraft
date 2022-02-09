@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "fortnite",
+    "name": "$19 Fortnite Card",
+    "description": "Who wants it?",
+    "creativeTab": {
+      "value": "CUSTOM:Meatcraft"
+    },
+    "music": {
+      "value": "CUSTOM:fortnite_default_dance"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "onRightClickedOnBlock": {
+      "name": "Test1RightClickedOnBlock"
+    }
+  }
+}

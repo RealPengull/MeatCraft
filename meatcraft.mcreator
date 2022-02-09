@@ -1,0 +1,327 @@
+{
+  "mod_elements": [
+    {
+      "name": "Airpods",
+      "type": "armor",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airpods",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      }
+    },
+    {
+      "name": "Cumsocks",
+      "type": "armor",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cumsocks",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      }
+    },
+    {
+      "name": "CumsocksBootsTickEvent",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cumsocks_boots_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cumsock",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cumsock"
+    },
+    {
+      "name": "AppleAirpods",
+      "type": "recipe",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apple_airpods"
+    },
+    {
+      "name": "Test",
+      "type": "livingentity",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test"
+    },
+    {
+      "name": "Test1",
+      "type": "musicdisc",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_1"
+    },
+    {
+      "name": "Test1RightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_1_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Meatcraft",
+      "type": "tab",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meatcraft"
+    },
+    {
+      "name": "Dream",
+      "type": "livingentity",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dream"
+    },
+    {
+      "name": "DreamOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dream_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirpodsHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airpods_helmet_tick_event",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "AnvilGun",
+      "type": "rangeditem",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil_gun"
+    },
+    {
+      "name": "CumJar",
+      "type": "food",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cum_jar"
+    },
+    {
+      "name": "CumJarFoodEaten",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cum_jar_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnvilGunProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil_gun_projectile_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnvilGunProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anvil_gun_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "fortnite_default_dance",
+      "files": [
+        "fortnite-default-dance-earrape"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "speedrun",
+      "files": [
+        "speedrun"
+      ],
+      "category": "hostile",
+      "subtitle": "Dream is near..."
+    },
+    {
+      "name": "bruh",
+      "files": [
+        "bruh-sound-effect-"
+      ],
+      "category": "neutral",
+      "subtitle": "Bruh"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.meatcraft.airpods_helmet": "Airpods",
+      "entity.meatcraft.test": "Model",
+      "item.meatcraft.cumsocks_boots": "Cumsocks",
+      "item.meatcraft.test_1.desc": "Who wants it?",
+      "item.meatcraft.cumsocks_helmet": "Cumsocks Helmet",
+      "subtitles.speedrun": "Dream is near...",
+      "item.meatcraft.anvil_gun": "Anvil Gun",
+      "item.meatcraft.airpods_chestplate": "Airpods Body",
+      "item.meatcraft.airpods_leggings": "Airpods Leggings",
+      "item.meatcraft.dream_spawn_egg": "Dream Spawn Egg",
+      "item.meatcraft.cumsocks_chestplate": "Cumsocks Body",
+      "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
+      "entity.meatcraft.dream": "Dream",
+      "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.airpods_boots": "Airpods Boots",
+      "item.meatcraft.test_spawn_egg": "Model Spawn Egg",
+      "itemGroup.tabmeatcraft": "Meatcraft",
+      "subtitles.bruh": "Bruh",
+      "item.meatcraft.test_1": "$19 Fortnite Card",
+      "subtitles.fortnite_default_dance": "",
+      "subtitles.default": ""
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "meatcraft",
+    "modName": "Meatcraft",
+    "version": "0.2.0",
+    "description": "A modpack used for testing.",
+    "author": "Pengull",
+    "websiteURL": "https://github.com/RealPengull/Meatcraft",
+    "license": "Public Domain",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "credits": "Pengull",
+    "modElementsPackage": "com.pengull.meatcraft",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

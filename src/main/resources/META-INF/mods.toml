@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="Public Domain"
+
+[[mods]]
+modId="meatcraft"
+version="0.2.0"
+displayName="Meatcraft"
+credits="Pengull"
+displayURL="https://github.com/RealPengull/Meatcraft"
+authors="Pengull"
+description='''
+A modpack used for testing.
+'''
+
+[[dependencies.meatcraft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+
