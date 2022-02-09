@@ -254,6 +254,30 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "chick_axe"
+    },
+    {
+      "name": "ChickAxeRecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chick_axe_recipe"
+    },
+    {
+      "name": "CookedChickAxe",
+      "type": "tool",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_chick_axe"
+    },
+    {
+      "name": "CookedChickenAxe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_chicken_axe"
     }
   ],
   "variable_elements": [],
@@ -300,6 +324,7 @@
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
       "entity.meatcraft.dream": "Dream",
       "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",
       "item.meatcraft.airpods_boots": "Airpods Boots",
       "item.meatcraft.test_spawn_egg": "Model Spawn Egg",
       "itemGroup.tabmeatcraft": "Meatcraft",
@@ -311,7 +336,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "MeatTools",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "meatcraft",

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "meatcraft:items/chickaxe"
+    "layer0": "meatcraft:items/cookedchickaxe"
   }
 }
