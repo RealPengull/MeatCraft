@@ -3,12 +3,14 @@ package com.pengull.meatcraft.item;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
 
 import com.pengull.meatcraft.init.MeatcraftModTabs;
 
-public class ChickAxeItem extends PickaxeItem {
+public class ChickAxeItem extends AxeItem {
 	public ChickAxeItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -16,11 +18,11 @@ public class ChickAxeItem extends PickaxeItem {
 			}
 
 			public float getSpeed() {
-				return 4f;
+				return 3f;
 			}
 
 			public float getAttackDamageBonus() {
-				return 2f;
+				return -1f;
 			}
 
 			public int getLevel() {
@@ -32,9 +34,9 @@ public class ChickAxeItem extends PickaxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of(new ItemStack(Items.CHICKEN), new ItemStack(Items.BONE));
 			}
-		}, 1, -3f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
+		}, 1, 6f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
 		setRegistryName("chick_axe");
 	}
 }

@@ -262,6 +262,30 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "fleshto_leather"
+    },
+    {
+      "name": "ChickAxeRecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chick_axe_recipe"
+    },
+    {
+      "name": "CookedChickenAxe",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_chicken_axe"
+    },
+    {
+      "name": "CookedChickAxe",
+      "type": "tool",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_chick_axe"
     }
   ],
   "variable_elements": [],
@@ -308,6 +332,7 @@
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
       "entity.meatcraft.dream": "Dream",
       "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",
       "item.meatcraft.airpods_boots": "Airpods Boots",
       "item.meatcraft.test_spawn_egg": "Model Spawn Egg",
       "itemGroup.tabmeatcraft": "Meatcraft",
@@ -319,14 +344,19 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "MeatTools",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "meatcraft",
     "modName": "Meatcraft",
-    "version": "0.2.3",
+    "version": "0.2.0",
     "description": "A modpack used for testing.",
-    "author": "Pengull, NovisRail",
+    "author": "Pengull",
     "websiteURL": "https://github.com/RealPengull/Meatcraft",
     "license": "Public Domain",
     "disableForgeVersionCheck": true,
@@ -336,7 +366,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.17.1",
-    "credits": "Pengull, NovisRail",
+    "credits": "Pengull",
     "modElementsPackage": "com.pengull.meatcraft",
     "lockBaseModFiles": false
   },
