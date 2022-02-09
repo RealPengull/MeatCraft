@@ -354,9 +354,9 @@
   "workspaceSettings": {
     "modid": "meatcraft",
     "modName": "Meatcraft",
-    "version": "0.2.0",
+    "version": "0.2.3",
     "description": "A modpack used for testing.",
-    "author": "Pengull",
+    "author": "Pengull, NovisRail",
     "websiteURL": "https://github.com/RealPengull/Meatcraft",
     "license": "Public Domain",
     "disableForgeVersionCheck": true,
@@ -366,7 +366,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.17.1",
-    "credits": "Pengull",
+    "credits": "Pengull, NovisRail",
     "modElementsPackage": "com.pengull.meatcraft",
     "lockBaseModFiles": false
   },

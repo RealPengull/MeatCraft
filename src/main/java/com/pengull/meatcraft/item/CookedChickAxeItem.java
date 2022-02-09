@@ -1,7 +1,12 @@
 
 package com.pengull.meatcraft.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
+
+import com.pengull.meatcraft.init.MeatcraftModTabs;
 
 public class CookedChickAxeItem extends AxeItem {
 	public CookedChickAxeItem() {
@@ -29,13 +34,7 @@ public class CookedChickAxeItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		},
-
-				1, -2f,
-
-				new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
-
+		}, 1, -2f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
 		setRegistryName("cooked_chick_axe");
 	}
-
 }
