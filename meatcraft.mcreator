@@ -254,6 +254,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "nmj"
+    },
+    {
+      "name": "E",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e"
     }
   ],
   "variable_elements": [],
@@ -300,6 +308,7 @@
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
       "entity.meatcraft.dream": "Dream",
       "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.e": "E",
       "item.meatcraft.airpods_boots": "Airpods Boots",
       "item.meatcraft.test_spawn_egg": "Model Spawn Egg",
       "itemGroup.tabmeatcraft": "Meatcraft",

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import com.pengull.meatcraft.item.Test1Item;
 import com.pengull.meatcraft.item.NmjItem;
+import com.pengull.meatcraft.item.EItem;
 import com.pengull.meatcraft.item.CumsocksItem;
 import com.pengull.meatcraft.item.CumJarItem;
 import com.pengull.meatcraft.item.AnvilGunItem;
@@ -36,6 +37,7 @@ public class MeatcraftModItems {
 	public static final Item ANVIL_GUN = register(new AnvilGunItem());
 	public static final Item CUM_JAR = register(new CumJarItem());
 	public static final Item NMJ = register(new NmjItem());
+	public static final Item E = register(new EItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
