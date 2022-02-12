@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:chicken"
+    },
+    "1": {
+      "item": "minecraft:chicken"
+    },
+    "2": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "meatcraft:raw_chicken_sword",
+    "count": 1
+  }
+}
