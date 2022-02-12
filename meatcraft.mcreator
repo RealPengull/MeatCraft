@@ -396,6 +396,23 @@
       "locked_code": false,
       "registry_name": "raw_chicken",
       "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "MeatTableGuiWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_table_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/MeatTools/CraftingBlocks/MeatTable"
     }
   ],
   "variable_elements": [],
