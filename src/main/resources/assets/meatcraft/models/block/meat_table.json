@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "meatcraft:blocks/meattable",
+    "up": "meatcraft:blocks/meattable",
+    "north": "meatcraft:blocks/meattable",
+    "east": "meatcraft:blocks/meattable",
+    "south": "meatcraft:blocks/meattable",
+    "west": "meatcraft:blocks/meattable",
+    "particle": "meatcraft:blocks/meattable"
+  }
+}

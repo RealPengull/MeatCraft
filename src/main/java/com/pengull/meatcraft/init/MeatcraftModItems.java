@@ -8,8 +8,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.BlockItem;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -38,10 +41,15 @@ public class MeatcraftModItems {
 	public static final Item CUM_JAR = register(new CumJarItem());
 	public static final Item CHICK_AXE = register(new ChickAxeItem());
 	public static final Item COOKED_CHICK_AXE = register(new CookedChickAxeItem());
+	public static final Item MEAT_TABLE = register(MeatcraftModBlocks.MEAT_TABLE, MeatcraftModTabs.TAB_MEATCRAFT);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);
 		return item;
+	}
+
+	private static Item register(Block block, CreativeModeTab tab) {
+		return register(new BlockItem(block, new Item.Properties().tab(tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent

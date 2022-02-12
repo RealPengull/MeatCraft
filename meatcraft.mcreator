@@ -253,7 +253,8 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chick_axe"
+      "registry_name": "chick_axe",
+      "path": "~/MeatTools/Chicken"
     },
     {
       "name": "FleshtoLeather",
@@ -269,7 +270,8 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chick_axe_recipe"
+      "registry_name": "chick_axe_recipe",
+      "path": "~/MeatTools/Chicken"
     },
     {
       "name": "CookedChickenAxe",
@@ -277,7 +279,8 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cooked_chicken_axe"
+      "registry_name": "cooked_chicken_axe",
+      "path": "~/MeatTools/Chicken"
     },
     {
       "name": "CookedChickAxe",
@@ -285,7 +288,88 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cooked_chick_axe"
+      "registry_name": "cooked_chick_axe",
+      "path": "~/MeatTools/Chicken"
+    },
+    {
+      "name": "MeatTableGui",
+      "type": "gui",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_table_gui",
+      "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "MeatTable",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_table",
+      "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "WhenItemTakenFromSlot",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_item_taken_from_slot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "WhenGuiIsCLosed",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_gui_is_c_losed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "MeatTableGuiThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_table_gui_this_gui_is_closed",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/MeatTools/CraftingBlocks"
     }
   ],
   "variable_elements": [],
@@ -318,6 +402,7 @@
   "language_map": {
     "en_us": {
       "item.meatcraft.cumsocks_boots": "Cumsocks",
+      "block.meatcraft.meat_table": "Meat Table",
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
       "entity.meatcraft.dream": "Dream",
       "item.meatcraft.cum_jar": "Cum Jar",
@@ -347,6 +432,44 @@
     "children": [
       {
         "name": "MeatTools",
+        "children": [
+          {
+            "name": "Chicken",
+            "children": []
+          },
+          {
+            "name": "Pork",
+            "children": []
+          },
+          {
+            "name": "Beef",
+            "children": []
+          },
+          {
+            "name": "Horse",
+            "children": []
+          },
+          {
+            "name": "Mutton",
+            "children": []
+          },
+          {
+            "name": "Rabbit",
+            "children": []
+          },
+          {
+            "name": "CraftingBlocks",
+            "children": [
+              {
+                "name": "MeatTable",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CustomCraftingGui",
         "children": []
       }
     ]

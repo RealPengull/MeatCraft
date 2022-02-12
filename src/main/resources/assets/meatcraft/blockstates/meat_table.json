@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "meatcraft:block/meat_table"
+    }
+  }
+}
