@@ -286,42 +286,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "cooked_chick_axe"
-    },
-    {
-      "name": "RawChickenSword",
-      "type": "tool",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_chicken_sword",
-      "path": "~/MeatTools"
-    },
-    {
-      "name": "CookedChickenSword",
-      "type": "tool",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cooked_chicken_sword",
-      "path": "~/MeatTools"
-    },
-    {
-      "name": "RawChickenSwordRecipe",
-      "type": "recipe",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_chicken_sword_recipe",
-      "path": "~/MeatTools"
-    },
-    {
-      "name": "CookedChickenSwordRecipe",
-      "type": "recipe",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cooked_chicken_sword_recipe",
-      "path": "~/MeatTools"
     }
   ],
   "variable_elements": [],
@@ -358,7 +322,6 @@
       "entity.meatcraft.dream": "Dream",
       "item.meatcraft.cum_jar": "Cum Jar",
       "item.meatcraft.airpods_boots": "Airpods Boots",
-      "item.meatcraft.raw_chicken_sword": "Raw Chicken Sword",
       "item.meatcraft.test_spawn_egg": "Model Spawn Egg",
       "itemGroup.tabmeatcraft": "Meatcraft",
       "subtitles.bruh": "Bruh",
@@ -376,8 +339,7 @@
       "item.meatcraft.airpods_leggings": "Airpods Leggings",
       "item.meatcraft.dream_spawn_egg": "Dream Spawn Egg",
       "item.meatcraft.cumsocks_chestplate": "Cumsocks Body",
-      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",
-      "item.meatcraft.cooked_chicken_sword": "Cooked Chicken Sword"
+      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe"
     }
   },
   "foldersRoot": {
