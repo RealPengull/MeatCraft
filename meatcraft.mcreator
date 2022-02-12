@@ -298,7 +298,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "meat_table_gui",
-      "path": "~/MeatTools/CraftingBlocks"
+      "path": "~/MeatTools/CraftingBlocks/MeatTable"
     },
     {
       "name": "MeatTable",
@@ -307,7 +307,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "meat_table",
-      "path": "~/MeatTools/CraftingBlocks"
+      "path": "~/MeatTools/CraftingBlocks/MeatTable"
     },
     {
       "name": "WhenItemTakenFromSlot",
@@ -369,6 +369,32 @@
       "metadata": {
         "dependencies": []
       },
+      "path": "~/MeatTools/CraftingBlocks"
+    },
+    {
+      "name": "MeatTableCraftingProcedure",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_table_crafting_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/MeatTools/CraftingBlocks/MeatTable"
+    },
+    {
+      "name": "RawChicken",
+      "type": "tag",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_chicken",
       "path": "~/MeatTools/CraftingBlocks"
     }
   ],
