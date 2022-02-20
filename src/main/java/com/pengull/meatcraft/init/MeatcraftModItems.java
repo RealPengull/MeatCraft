@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import com.pengull.meatcraft.item.Test1Item;
+import com.pengull.meatcraft.item.EmptyJarItem;
 import com.pengull.meatcraft.item.CumsocksItem;
 import com.pengull.meatcraft.item.CumJarItem;
 import com.pengull.meatcraft.item.CookedChickAxeItem;
@@ -42,6 +43,7 @@ public class MeatcraftModItems {
 	public static final Item CHICK_AXE = register(new ChickAxeItem());
 	public static final Item COOKED_CHICK_AXE = register(new CookedChickAxeItem());
 	public static final Item MEAT_TABLE = register(MeatcraftModBlocks.MEAT_TABLE, MeatcraftModTabs.TAB_MEATCRAFT);
+	public static final Item EMPTY_JAR = register(new EmptyJarItem());
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

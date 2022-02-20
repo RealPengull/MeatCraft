@@ -26,7 +26,8 @@
         "el": false,
         "eb": true,
         "ec": false
-      }
+      },
+      "path": "~/Cum"
     },
     {
       "name": "CumsocksBootsTickEvent",
@@ -42,7 +43,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Cum"
     },
     {
       "name": "Cumsock",
@@ -50,7 +52,8 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cumsock"
+      "registry_name": "cumsock",
+      "path": "~/Cum"
     },
     {
       "name": "AppleAirpods",
@@ -173,7 +176,8 @@
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cum_jar"
+      "registry_name": "cum_jar",
+      "path": "~/Cum"
     },
     {
       "name": "CumJarFoodEaten",
@@ -205,7 +209,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Cum"
     },
     {
       "name": "AnvilGunProjectileHitsBlock",
@@ -456,7 +461,16 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Cum"
+    },
+    {
+      "name": "EmptyJar",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_jar"
     }
   ],
   "variable_elements": [],
@@ -520,7 +534,8 @@
       "item.meatcraft.airpods_leggings": "Airpods Leggings",
       "item.meatcraft.dream_spawn_egg": "Dream Spawn Egg",
       "item.meatcraft.cumsocks_chestplate": "Cumsocks Body",
-      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe"
+      "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",
+      "item.meatcraft.empty_jar": "Empty Jar"
     }
   },
   "foldersRoot": {
@@ -566,6 +581,10 @@
       },
       {
         "name": "CustomCraftingGui",
+        "children": []
+      },
+      {
+        "name": "Cum",
         "children": []
       }
     ]
