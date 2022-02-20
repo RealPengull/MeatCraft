@@ -22,6 +22,7 @@ public class MeatcraftModSounds {
 				new SoundEvent(new ResourceLocation("meatcraft", "fortnite_default_dance")));
 		REGISTRY.put(new ResourceLocation("meatcraft", "speedrun"), new SoundEvent(new ResourceLocation("meatcraft", "speedrun")));
 		REGISTRY.put(new ResourceLocation("meatcraft", "bruh"), new SoundEvent(new ResourceLocation("meatcraft", "bruh")));
+		REGISTRY.put(new ResourceLocation("meatcraft", "ascend"), new SoundEvent(new ResourceLocation("meatcraft", "ascend")));
 	}
 
 	@SubscribeEvent

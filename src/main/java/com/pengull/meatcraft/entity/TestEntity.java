@@ -12,7 +12,6 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -46,7 +45,6 @@ public class TestEntity extends PathfinderMob {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.WOODEN_SWORD));
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(MeatcraftModItems.AIRPODS_HELMET));
 		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(MeatcraftModItems.CUMSOCKS_BOOTS));
 	}

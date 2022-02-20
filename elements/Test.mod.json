@@ -27,7 +27,7 @@
     "bossBarColor": "BLUE",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "Items.WOODEN_SWORD"
+      "value": ""
     },
     "equipmentOffHand": {
       "value": ""

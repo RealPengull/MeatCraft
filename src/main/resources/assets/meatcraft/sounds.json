@@ -27,5 +27,14 @@
         "stream": false
       }
     ]
+  },
+  "ascend": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "meatcraft:ascend",
+        "stream": false
+      }
+    ]
   }
 }
