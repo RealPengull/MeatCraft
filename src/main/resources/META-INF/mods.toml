@@ -1,22 +1,22 @@
 modLoader="javafml"
-loaderVersion="[37,)"
+loaderVersion="[43,)"
 license="Public Domain"
 
 [[mods]]
 modId="meatcraft"
-version="0.2.3"
+version="0.2.5"
 displayName="Meatcraft"
 credits="Pengull, NovisRail"
 displayURL="https://github.com/RealPengull/Meatcraft"
 authors="Pengull, NovisRail"
 description='''
-A modpack used for testing.
+A cursed modpack with dank memes and CUM.
 '''
 
 [[dependencies.meatcraft]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.19.2]"
     ordering="NONE"
     side="BOTH"
 

@@ -2,7 +2,7 @@ package com.pengull.meatcraft.procedures;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
@@ -18,623 +18,547 @@ public class WhenGuiIsCLosedProcedure {
 		if (entity == null)
 			return;
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 0)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 0;
+					final int _slotid = 0;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 0))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 0))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 1)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 1;
+					final int _slotid = 1;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 1))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 1))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 2)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 2;
+					final int _slotid = 2;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 2))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 2))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 3)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 3;
+					final int _slotid = 3;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 3))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 3))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 4)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 4;
+					final int _slotid = 4;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 4))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 4))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 5))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 5)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 5))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 5;
+					final int _slotid = 5;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 5))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 5))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 6))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 6)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 6))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 6;
+					final int _slotid = 6;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 6))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 6))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 7))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 7)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 7))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 7;
+					final int _slotid = 7;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 7))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 7))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 8))).getCount() >= 1) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8)).copy());
+				}.getItemStack(world, new BlockPos(x, y, z), 8)).copy());
 				_setstack.setCount(((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
+						if (_ent != null)
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+									.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 						return _retval.get();
 					}
-				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8))).getCount());
+				}.getItemStack(world, new BlockPos(x, y, z), 8))).getCount());
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 8;
+					final int _slotid = 8;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 8))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 8))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}
 			}
 		}
 		if (((new Object() {
-			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null) {
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						_retval.set(capability.getStackInSlot(sltid).copy());
-					});
-				}
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+							.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 9))).getCount() >= 1) {
+		}.getItemStack(world, new BlockPos(x, y, z), 9))).getCount() >= 1) {
 			{
-				BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
+				BlockEntity _ent = world.getBlockEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
-					final int _sltid = 9;
+					final int _slotid = 9;
 					final int _amount = ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null)
+										.ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 9))).getCount();
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+					}.getItemStack(world, new BlockPos(x, y, z), 9))).getCount();
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
-							ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+							ItemStack _stk = capability.getStackInSlot(_slotid).copy();
 							_stk.shrink(_amount);
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _stk);
 						}
 					});
 				}

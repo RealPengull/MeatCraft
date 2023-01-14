@@ -64,7 +64,6 @@ public abstract class AirpodsItem extends ArmorItem {
 	public static class Helmet extends AirpodsItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
-			setRegistryName("airpods_helmet");
 		}
 
 		@Override

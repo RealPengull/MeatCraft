@@ -2,16 +2,12 @@
 package com.pengull.meatcraft.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
-import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
@@ -30,11 +26,10 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
@@ -47,15 +42,9 @@ import javax.annotation.Nullable;
 import com.pengull.meatcraft.procedures.DreamOnInitialEntitySpawnProcedure;
 import com.pengull.meatcraft.init.MeatcraftModEntities;
 
-@Mod.EventBusSubscriber
 public class DreamEntity extends Monster {
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(MeatcraftModEntities.DREAM, 1, 1, 1));
-	}
-
-	public DreamEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
-		this(MeatcraftModEntities.DREAM, world);
+	public DreamEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(MeatcraftModEntities.DREAM.get(), world);
 	}
 
 	public DreamEntity(EntityType<DreamEntity> type, Level world) {
@@ -76,7 +65,12 @@ public class DreamEntity extends Monster {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, true));
 		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 0.3));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 5, true));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 5, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 10));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
@@ -111,20 +105,15 @@ public class DreamEntity extends Monster {
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
 			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-
-		DreamOnInitialEntitySpawnProcedure.execute(world, x, y, z);
+		DreamOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ());
 		return retval;
 	}
 
 	public static void init() {
-		SpawnPlacements.register(MeatcraftModEntities.DREAM, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(MeatcraftModEntities.DREAM.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
-		DungeonHooks.addDungeonMob(MeatcraftModEntities.DREAM, 180);
+		DungeonHooks.addDungeonMob(MeatcraftModEntities.DREAM.get(), 180);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -133,6 +122,7 @@ public class DreamEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}
 }

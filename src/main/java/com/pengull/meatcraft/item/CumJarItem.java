@@ -1,6 +1,7 @@
 
 package com.pengull.meatcraft.item;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
@@ -16,12 +17,16 @@ public class CumJarItem extends Item {
 	public CumJarItem() {
 		super(new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT).stacksTo(1).rarity(Rarity.COMMON)
 				.food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.1f).alwaysEat().meat().build()));
-		setRegistryName("cum_jar");
 	}
 
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.DRINK;
+	}
+
+	@Override
+	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+		return 0F;
 	}
 
 	@Override

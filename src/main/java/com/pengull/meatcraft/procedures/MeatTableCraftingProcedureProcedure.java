@@ -18,7 +18,7 @@ public class MeatTableCraftingProcedureProcedure {
 		if (new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-						&& _current.get()instanceof Map _slots) {
+						&& _current.get() instanceof Map _slots) {
 					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 					if (stack != null)
 						return stack.getCount();
@@ -27,11 +27,11 @@ public class MeatTableCraftingProcedureProcedure {
 			}
 		}.getAmount(0) >= 1
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
-						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
+						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -40,11 +40,11 @@ public class MeatTableCraftingProcedureProcedure {
 					}
 				}.getAmount(1) >= 1
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
-						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
+						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -54,7 +54,7 @@ public class MeatTableCraftingProcedureProcedure {
 				}.getAmount(2) >= 1 && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -63,11 +63,11 @@ public class MeatTableCraftingProcedureProcedure {
 					}
 				}.getAmount(3) >= 1
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
-						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
+						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Items.CHICKEN
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -76,11 +76,11 @@ public class MeatTableCraftingProcedureProcedure {
 					}
 				}.getAmount(4) >= 1
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
-						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == Items.BONE
+						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == Items.BONE
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -90,7 +90,7 @@ public class MeatTableCraftingProcedureProcedure {
 				}.getAmount(5) >= 1 && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -100,7 +100,7 @@ public class MeatTableCraftingProcedureProcedure {
 				}.getAmount(6) >= 1 && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -109,11 +109,11 @@ public class MeatTableCraftingProcedureProcedure {
 					}
 				}.getAmount(7) >= 1
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
-						&& _splr.get()instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Items.BONE
+						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Items.BONE
 				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
-								&& _current.get()instanceof Map _slots) {
+								&& _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
 							if (stack != null)
 								return stack.getCount();
@@ -121,8 +121,9 @@ public class MeatTableCraftingProcedureProcedure {
 						return 0;
 					}
 				}.getAmount(8) >= 1) {
-			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current && _current.get()instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(MeatcraftModItems.CHICK_AXE);
+			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
+					&& _current.get() instanceof Map _slots) {
+				ItemStack _setstack = new ItemStack(MeatcraftModItems.CHICK_AXE.get());
 				_setstack.setCount(1);
 				((Slot) _slots.get(9)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

@@ -66,7 +66,6 @@ public abstract class CumsocksItem extends ArmorItem {
 	public static class Boots extends CumsocksItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
-			setRegistryName("cumsocks_boots");
 		}
 
 		@Override

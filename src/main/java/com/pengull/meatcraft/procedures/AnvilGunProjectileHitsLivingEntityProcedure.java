@@ -10,9 +10,9 @@ import java.util.Map;
 
 public class AnvilGunProjectileHitsLivingEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (Blocks.ANVIL.defaultBlockState().canSurvive(world, new BlockPos((int) x, (int) y, (int) z))) {
+		if (Blocks.ANVIL.defaultBlockState().canSurvive(world, new BlockPos(x, y, z))) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = Blocks.ANVIL.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

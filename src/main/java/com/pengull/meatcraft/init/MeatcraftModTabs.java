@@ -4,9 +4,6 @@
  */
 package com.pengull.meatcraft.init;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
@@ -17,10 +14,10 @@ public class MeatcraftModTabs {
 		TAB_MEATCRAFT = new CreativeModeTab("tabmeatcraft") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(MeatcraftModItems.AIRPODS_HELMET);
+				return new ItemStack(MeatcraftModItems.AIRPODS_HELMET.get());
 			}
 
-			@OnlyIn(Dist.CLIENT)
+			@Override
 			public boolean hasSearchBar() {
 				return true;
 			}

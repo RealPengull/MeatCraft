@@ -21,7 +21,6 @@ import com.pengull.meatcraft.entity.AnvilGunEntity;
 public class AnvilGunItem extends Item {
 	public AnvilGunItem() {
 		super(new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT).durability(100));
-		setRegistryName("anvil_gun");
 	}
 
 	@Override

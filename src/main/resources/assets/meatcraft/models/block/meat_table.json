@@ -8,5 +8,6 @@
     "south": "meatcraft:blocks/meattable",
     "west": "meatcraft:blocks/meattable",
     "particle": "meatcraft:blocks/meattable"
-  }
+  },
+  "render_type": "solid"
 }

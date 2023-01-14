@@ -4,30 +4,22 @@
  */
 package com.pengull.meatcraft.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.pengull.meatcraft.MeatcraftMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MeatcraftModSounds {
-	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
-	static {
-		REGISTRY.put(new ResourceLocation("meatcraft", "fortnite_default_dance"),
-				new SoundEvent(new ResourceLocation("meatcraft", "fortnite_default_dance")));
-		REGISTRY.put(new ResourceLocation("meatcraft", "speedrun"), new SoundEvent(new ResourceLocation("meatcraft", "speedrun")));
-		REGISTRY.put(new ResourceLocation("meatcraft", "bruh"), new SoundEvent(new ResourceLocation("meatcraft", "bruh")));
-		REGISTRY.put(new ResourceLocation("meatcraft", "ascend"), new SoundEvent(new ResourceLocation("meatcraft", "ascend")));
-	}
-
-	@SubscribeEvent
-	public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
-		for (Map.Entry<ResourceLocation, SoundEvent> sound : REGISTRY.entrySet())
-			event.getRegistry().register(sound.getValue().setRegistryName(sound.getKey()));
-	}
+	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MeatcraftMod.MODID);
+	public static final RegistryObject<SoundEvent> SPEEDRUN = REGISTRY.register("speedrun",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "speedrun")));
+	public static final RegistryObject<SoundEvent> BRUH = REGISTRY.register("bruh", () -> new SoundEvent(new ResourceLocation("meatcraft", "bruh")));
+	public static final RegistryObject<SoundEvent> ASCEND = REGISTRY.register("ascend",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "ascend")));
+	public static final RegistryObject<SoundEvent> FORTNITE_DEFAULT_DANCE = REGISTRY.register("fortnite_default_dance",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "fortnite_default_dance")));
 }

@@ -35,6 +35,5 @@ public class CookedChickAxeItem extends AxeItem {
 				return Ingredient.EMPTY;
 			}
 		}, 1, -2f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
-		setRegistryName("cooked_chick_axe");
 	}
 }

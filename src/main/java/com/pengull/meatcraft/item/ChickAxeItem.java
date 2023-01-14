@@ -37,6 +37,5 @@ public class ChickAxeItem extends AxeItem {
 				return Ingredient.of(new ItemStack(Items.CHICKEN), new ItemStack(Items.BONE));
 			}
 		}, 1, 6f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
-		setRegistryName("chick_axe");
 	}
 }

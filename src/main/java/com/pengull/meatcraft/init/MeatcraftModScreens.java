@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package com.pengull.meatcraft.init;
 
@@ -18,7 +18,7 @@ public class MeatcraftModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(MeatcraftModMenus.MEAT_TABLE_GUI, MeatTableGuiScreen::new);
+			MenuScreens.register(MeatcraftModMenus.MEAT_TABLE_GUI.get(), MeatTableGuiScreen::new);
 		});
 	}
 }

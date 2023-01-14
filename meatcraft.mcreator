@@ -171,15 +171,6 @@
       "registry_name": "anvil_gun"
     },
     {
-      "name": "CumJar",
-      "type": "food",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cum_jar",
-      "path": "~/Cum"
-    },
-    {
       "name": "CumJarFoodEaten",
       "type": "procedure",
       "sortid": 18,
@@ -471,18 +462,19 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "empty_jar"
+    },
+    {
+      "name": "CumJar",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cum_jar",
+      "path": "~/Cum"
     }
   ],
   "variable_elements": [],
   "sound_elements": [
-    {
-      "name": "fortnite_default_dance",
-      "files": [
-        "fortnite-default-dance-earrape"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
     {
       "name": "speedrun",
       "files": [
@@ -505,6 +497,14 @@
         "ascend"
       ],
       "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "fortnite_default_dance",
+      "files": [
+        "fortnite-default-dance-earrape"
+      ],
+      "category": "record",
       "subtitle": ""
     }
   ],
@@ -592,8 +592,8 @@
   "workspaceSettings": {
     "modid": "meatcraft",
     "modName": "Meatcraft",
-    "version": "0.2.3",
-    "description": "A modpack used for testing.",
+    "version": "0.2.5",
+    "description": "A cursed modpack with dank memes and CUM.",
     "author": "Pengull, NovisRail",
     "websiteURL": "https://github.com/RealPengull/Meatcraft",
     "license": "Public Domain",
@@ -603,10 +603,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.17.1",
+    "currentGenerator": "forge-1.19.2",
     "credits": "Pengull, NovisRail",
     "modElementsPackage": "com.pengull.meatcraft",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100354000
+  "mcreatorVersion": 202200348217
 }

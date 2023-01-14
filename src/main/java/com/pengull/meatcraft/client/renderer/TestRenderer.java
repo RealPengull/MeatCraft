@@ -1,3 +1,4 @@
+
 package com.pengull.meatcraft.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,6 @@ public class TestRenderer extends HumanoidMobRenderer<TestEntity, HumanoidModel<
 
 	@Override
 	public ResourceLocation getTextureLocation(TestEntity entity) {
-		return new ResourceLocation("meatcraft:textures/9c9c88eaef7b7717.png");
+		return new ResourceLocation("meatcraft:textures/entities/9c9c88eaef7b7717.png");
 	}
 }

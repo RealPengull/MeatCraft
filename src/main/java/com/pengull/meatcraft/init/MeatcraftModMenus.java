@@ -1,37 +1,21 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package com.pengull.meatcraft.init;
 
-import net.minecraftforge.fmllegacy.network.IContainerFactory;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-
-import java.util.List;
-import java.util.ArrayList;
 
 import com.pengull.meatcraft.world.inventory.MeatTableGuiMenu;
+import com.pengull.meatcraft.MeatcraftMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MeatcraftModMenus {
-	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
-	public static final MenuType<MeatTableGuiMenu> MEAT_TABLE_GUI = register("meat_table_gui",
-			(id, inv, extraData) -> new MeatTableGuiMenu(id, inv, extraData));
-
-	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
-		MenuType<T> menuType = new MenuType<T>(containerFactory);
-		menuType.setRegistryName(registryname);
-		REGISTRY.add(menuType);
-		return menuType;
-	}
-
-	@SubscribeEvent
-	public static void registerContainers(RegistryEvent.Register<MenuType<?>> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new MenuType[0]));
-	}
+	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, MeatcraftMod.MODID);
+	public static final RegistryObject<MenuType<MeatTableGuiMenu>> MEAT_TABLE_GUI = REGISTRY.register("meat_table_gui",
+			() -> IForgeMenuType.create(MeatTableGuiMenu::new));
 }

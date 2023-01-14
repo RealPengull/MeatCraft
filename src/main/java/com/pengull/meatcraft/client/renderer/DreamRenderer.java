@@ -1,3 +1,4 @@
+
 package com.pengull.meatcraft.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,6 @@ public class DreamRenderer extends HumanoidMobRenderer<DreamEntity, HumanoidMode
 
 	@Override
 	public ResourceLocation getTextureLocation(DreamEntity entity) {
-		return new ResourceLocation("meatcraft:textures/dream.png");
+		return new ResourceLocation("meatcraft:textures/entities/dream.png");
 	}
 }

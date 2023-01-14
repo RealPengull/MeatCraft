@@ -9,12 +9,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import java.util.HashMap;
+
 import com.pengull.meatcraft.world.inventory.MeatTableGuiMenu;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class MeatTableGuiScreen extends AbstractContainerScreen<MeatTableGuiMenu> {
+	private final static HashMap<String, Object> guistate = MeatTableGuiMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -30,7 +33,7 @@ public class MeatTableGuiScreen extends AbstractContainerScreen<MeatTableGuiMenu
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("meatcraft:textures/meat_table_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("meatcraft:textures/screens/meat_table_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {

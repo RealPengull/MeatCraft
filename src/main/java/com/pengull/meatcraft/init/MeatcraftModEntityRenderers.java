@@ -18,8 +18,8 @@ import com.pengull.meatcraft.client.renderer.DreamRenderer;
 public class MeatcraftModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(MeatcraftModEntities.TEST, TestRenderer::new);
-		event.registerEntityRenderer(MeatcraftModEntities.DREAM, DreamRenderer::new);
-		event.registerEntityRenderer(MeatcraftModEntities.ANVIL_GUN, ThrownItemRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.TEST.get(), TestRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.DREAM.get(), DreamRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.ANVIL_GUN.get(), ThrownItemRenderer::new);
 	}
 }
