@@ -471,18 +471,19 @@
       "locked_code": false,
       "registry_name": "cum_jar",
       "path": "~/Cum"
+    },
+    {
+      "name": "Cumsockcraft",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cumsockcraft",
+      "path": "~/Cum"
     }
   ],
   "variable_elements": [],
   "sound_elements": [
-    {
-      "name": "speedrun",
-      "files": [
-        "speedrun"
-      ],
-      "category": "hostile",
-      "subtitle": "Dream is near..."
-    },
     {
       "name": "bruh",
       "files": [
@@ -506,6 +507,14 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "speedrun",
+      "files": [
+        "speedrun"
+      ],
+      "category": "hostile",
+      "subtitle": "Dream is near..."
     }
   ],
   "language_map": {

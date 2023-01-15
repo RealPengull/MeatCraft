@@ -1,14 +1,4 @@
 {
-  "speedrun": {
-    "category": "hostile",
-    "subtitle": "subtitles.speedrun",
-    "sounds": [
-      {
-        "name": "meatcraft:speedrun",
-        "stream": false
-      }
-    ]
-  },
   "bruh": {
     "category": "neutral",
     "subtitle": "subtitles.bruh",
@@ -34,6 +24,16 @@
       {
         "name": "meatcraft:fortnite-default-dance-earrape",
         "stream": true
+      }
+    ]
+  },
+  "speedrun": {
+    "category": "hostile",
+    "subtitle": "subtitles.speedrun",
+    "sounds": [
+      {
+        "name": "meatcraft:speedrun",
+        "stream": false
       }
     ]
   }
