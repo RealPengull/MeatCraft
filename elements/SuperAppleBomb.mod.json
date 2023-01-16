@@ -1,0 +1,46 @@
+{
+  "_fv": 34,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "goldenapplebomb",
+    "customModelName": "Normal",
+    "name": "Super Apple Bomb",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Meatcraft"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 1,
+    "actionSound": {
+      "value": "CUSTOM:cartoon_throw"
+    },
+    "hasGlow": false,
+    "animation": "block",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.4,
+    "bulletDamage": 1.0,
+    "bulletKnockback": 1,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:SuperAppleBomb"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "SuperAppleBombProjectileHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "SuperAppleBombProjectileHitsBlock"
+    },
+    "onBulletFlyingTick": {
+      "name": "StickybombWhileProjectileFlyingTick"
+    }
+  }
+}

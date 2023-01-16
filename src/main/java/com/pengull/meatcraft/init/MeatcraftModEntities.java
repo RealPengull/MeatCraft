@@ -16,8 +16,10 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import com.pengull.meatcraft.entity.TestEntity;
+import com.pengull.meatcraft.entity.SuperAppleBombEntity;
+import com.pengull.meatcraft.entity.StickybombEntity;
 import com.pengull.meatcraft.entity.PepigEntity;
+import com.pengull.meatcraft.entity.GodlyAppleBombEntity;
 import com.pengull.meatcraft.entity.DreamEntity;
 import com.pengull.meatcraft.entity.AnvilGunEntity;
 import com.pengull.meatcraft.MeatcraftMod;
@@ -25,11 +27,6 @@ import com.pengull.meatcraft.MeatcraftMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MeatcraftModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MeatcraftMod.MODID);
-	public static final RegistryObject<EntityType<TestEntity>> TEST = register("test",
-			EntityType.Builder.<TestEntity>of(TestEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(TestEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DreamEntity>> DREAM = register("dream",
 			EntityType.Builder.<DreamEntity>of(DreamEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(3).setCustomClientFactory(DreamEntity::new)
@@ -43,6 +40,15 @@ public class MeatcraftModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(PepigEntity::new)
 
 					.sized(0.9f, 0.9f));
+	public static final RegistryObject<EntityType<StickybombEntity>> APPLEBOMB = register("projectile_applebomb",
+			EntityType.Builder.<StickybombEntity>of(StickybombEntity::new, MobCategory.MISC).setCustomClientFactory(StickybombEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SuperAppleBombEntity>> SUPER_APPLE_BOMB = register("projectile_super_apple_bomb",
+			EntityType.Builder.<SuperAppleBombEntity>of(SuperAppleBombEntity::new, MobCategory.MISC).setCustomClientFactory(SuperAppleBombEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GodlyAppleBombEntity>> GODLY_APPLE_BOMB = register("projectile_godly_apple_bomb",
+			EntityType.Builder.<GodlyAppleBombEntity>of(GodlyAppleBombEntity::new, MobCategory.MISC).setCustomClientFactory(GodlyAppleBombEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -51,7 +57,6 @@ public class MeatcraftModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			TestEntity.init();
 			DreamEntity.init();
 			PepigEntity.init();
 		});
@@ -59,7 +64,6 @@ public class MeatcraftModEntities {
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(TEST.get(), TestEntity.createAttributes().build());
 		event.put(DREAM.get(), DreamEntity.createAttributes().build());
 		event.put(PEPIG.get(), PepigEntity.createAttributes().build());
 	}

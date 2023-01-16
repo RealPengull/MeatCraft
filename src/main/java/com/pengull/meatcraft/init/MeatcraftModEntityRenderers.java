@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
-import com.pengull.meatcraft.client.renderer.TestRenderer;
 import com.pengull.meatcraft.client.renderer.PepigRenderer;
 import com.pengull.meatcraft.client.renderer.DreamRenderer;
 
@@ -19,9 +18,11 @@ import com.pengull.meatcraft.client.renderer.DreamRenderer;
 public class MeatcraftModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(MeatcraftModEntities.TEST.get(), TestRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.DREAM.get(), DreamRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.ANVIL_GUN.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.PEPIG.get(), PepigRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.APPLEBOMB.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.SUPER_APPLE_BOMB.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.GODLY_APPLE_BOMB.get(), ThrownItemRenderer::new);
 	}
 }

@@ -14,9 +14,6 @@
       "value": "CUSTOM:fortnite_default_dance"
     },
     "lengthInTicks": 0,
-    "analogOutput": 0,
-    "onRightClickedOnBlock": {
-      "name": "Test1RightClickedOnBlock"
-    }
+    "analogOutput": 0
   }
 }

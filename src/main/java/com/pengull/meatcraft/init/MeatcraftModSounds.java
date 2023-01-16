@@ -18,8 +18,12 @@ public class MeatcraftModSounds {
 	public static final RegistryObject<SoundEvent> BRUH = REGISTRY.register("bruh", () -> new SoundEvent(new ResourceLocation("meatcraft", "bruh")));
 	public static final RegistryObject<SoundEvent> ASCEND = REGISTRY.register("ascend",
 			() -> new SoundEvent(new ResourceLocation("meatcraft", "ascend")));
-	public static final RegistryObject<SoundEvent> FORTNITE_DEFAULT_DANCE = REGISTRY.register("fortnite_default_dance",
-			() -> new SoundEvent(new ResourceLocation("meatcraft", "fortnite_default_dance")));
 	public static final RegistryObject<SoundEvent> SPEEDRUN = REGISTRY.register("speedrun",
 			() -> new SoundEvent(new ResourceLocation("meatcraft", "speedrun")));
+	public static final RegistryObject<SoundEvent> FORTNITE_DEFAULT_DANCE = REGISTRY.register("fortnite_default_dance",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "fortnite_default_dance")));
+	public static final RegistryObject<SoundEvent> CARTOON_THROW = REGISTRY.register("cartoon_throw",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "cartoon_throw")));
+	public static final RegistryObject<SoundEvent> GODLYAPPLE = REGISTRY.register("godlyapple",
+			() -> new SoundEvent(new ResourceLocation("meatcraft", "godlyapple")));
 }

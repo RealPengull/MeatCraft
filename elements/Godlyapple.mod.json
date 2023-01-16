@@ -1,0 +1,46 @@
+{
+  "_fv": 34,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "CUSTOM:SuperAppleBomb"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "CUSTOM:SuperAppleBomb"
+      },
+      {
+        "value": "Items.GOLDEN_APPLE#1"
+      },
+      {
+        "value": "CUSTOM:SuperAppleBomb"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "CUSTOM:SuperAppleBomb"
+      },
+      {
+        "value": "Blocks.TNT"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GodlyAppleBomb"
+    },
+    "name": "godlyapple",
+    "namespace": "mod"
+  }
+}

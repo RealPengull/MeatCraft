@@ -18,8 +18,19 @@
       }
     ]
   },
+  "speedrun": {
+    "category": "hostile",
+    "subtitle": "subtitles.speedrun",
+    "sounds": [
+      {
+        "name": "meatcraft:speedrun",
+        "stream": false
+      }
+    ]
+  },
   "fortnite_default_dance": {
     "category": "record",
+    "subtitle": "subtitles.fortnite_default_dance",
     "sounds": [
       {
         "name": "meatcraft:fortnite-default-dance-earrape",
@@ -27,12 +38,21 @@
       }
     ]
   },
-  "speedrun": {
-    "category": "hostile",
-    "subtitle": "subtitles.speedrun",
+  "cartoon_throw": {
+    "category": "neutral",
     "sounds": [
       {
-        "name": "meatcraft:speedrun",
+        "name": "meatcraft:cartoon-throw-sound",
+        "stream": false
+      }
+    ]
+  },
+  "godlyapple": {
+    "category": "hostile",
+    "subtitle": "subtitles.godlyapple",
+    "sounds": [
+      {
+        "name": "meatcraft:godlyapple",
         "stream": false
       }
     ]

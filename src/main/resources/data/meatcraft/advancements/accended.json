@@ -1,0 +1,30 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "meatcraft:empty_jar"
+    },
+    "title": {
+      "translate": "advancements.accended.title"
+    },
+    "description": {
+      "translate": "advancements.accended.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "accended": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "meatcraft:cum_jar"
+          ]
+        }
+      }
+    }
+  }
+}

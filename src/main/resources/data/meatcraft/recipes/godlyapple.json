@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:tnt"
+    },
+    "1": {
+      "item": "meatcraft:super_apple_bomb"
+    },
+    "2": {
+      "item": "minecraft:tnt"
+    },
+    "3": {
+      "item": "meatcraft:super_apple_bomb"
+    },
+    "4": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "5": {
+      "item": "meatcraft:super_apple_bomb"
+    },
+    "6": {
+      "item": "minecraft:tnt"
+    },
+    "7": {
+      "item": "meatcraft:super_apple_bomb"
+    },
+    "8": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "meatcraft:godly_apple_bomb",
+    "count": 1
+  }
+}

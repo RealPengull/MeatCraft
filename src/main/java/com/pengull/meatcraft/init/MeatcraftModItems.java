@@ -15,6 +15,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import com.pengull.meatcraft.item.Test1Item;
+import com.pengull.meatcraft.item.SuperAppleBombItem;
+import com.pengull.meatcraft.item.StickybombItem;
+import com.pengull.meatcraft.item.GodlyAppleBombItem;
 import com.pengull.meatcraft.item.EmptyJarItem;
 import com.pengull.meatcraft.item.CumsocksItem;
 import com.pengull.meatcraft.item.CumJarItem;
@@ -28,8 +31,6 @@ public class MeatcraftModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MeatcraftMod.MODID);
 	public static final RegistryObject<Item> AIRPODS_HELMET = REGISTRY.register("airpods_helmet", () -> new AirpodsItem.Helmet());
 	public static final RegistryObject<Item> CUMSOCKS_BOOTS = REGISTRY.register("cumsocks_boots", () -> new CumsocksItem.Boots());
-	public static final RegistryObject<Item> TEST = REGISTRY.register("test_spawn_egg",
-			() -> new ForgeSpawnEggItem(MeatcraftModEntities.TEST, -16711681, -1, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT)));
 	public static final RegistryObject<Item> DEFAULTDANCE = REGISTRY.register("defaultdance", () -> new Test1Item());
 	public static final RegistryObject<Item> DREAM = REGISTRY.register("dream_spawn_egg",
 			() -> new ForgeSpawnEggItem(MeatcraftModEntities.DREAM, -1, -16410110, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT)));
@@ -41,6 +42,9 @@ public class MeatcraftModItems {
 	public static final RegistryObject<Item> CUM_JAR = REGISTRY.register("cum_jar", () -> new CumJarItem());
 	public static final RegistryObject<Item> PEPIG = REGISTRY.register("pepig_spawn_egg",
 			() -> new ForgeSpawnEggItem(MeatcraftModEntities.PEPIG, -1, -2646982, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT)));
+	public static final RegistryObject<Item> APPLEBOMB = REGISTRY.register("applebomb", () -> new StickybombItem());
+	public static final RegistryObject<Item> SUPER_APPLE_BOMB = REGISTRY.register("super_apple_bomb", () -> new SuperAppleBombItem());
+	public static final RegistryObject<Item> GODLY_APPLE_BOMB = REGISTRY.register("godly_apple_bomb", () -> new GodlyAppleBombItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
