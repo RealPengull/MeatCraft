@@ -14,7 +14,7 @@ public class MeatcraftModTabs {
 		TAB_MEATCRAFT = new CreativeModeTab("tabmeatcraft") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(MeatcraftModItems.AIRPODS_HELMET.get());
+				return new ItemStack(MeatcraftModItems.CUM_JAR.get());
 			}
 
 			@Override

@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import com.pengull.meatcraft.entity.TestEntity;
+import com.pengull.meatcraft.entity.PepigEntity;
 import com.pengull.meatcraft.entity.DreamEntity;
 import com.pengull.meatcraft.entity.AnvilGunEntity;
 import com.pengull.meatcraft.MeatcraftMod;
@@ -37,6 +38,11 @@ public class MeatcraftModEntities {
 	public static final RegistryObject<EntityType<AnvilGunEntity>> ANVIL_GUN = register("projectile_anvil_gun",
 			EntityType.Builder.<AnvilGunEntity>of(AnvilGunEntity::new, MobCategory.MISC).setCustomClientFactory(AnvilGunEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PepigEntity>> PEPIG = register("pepig",
+			EntityType.Builder.<PepigEntity>of(PepigEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(PepigEntity::new)
+
+					.sized(0.9f, 0.9f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -47,6 +53,7 @@ public class MeatcraftModEntities {
 		event.enqueueWork(() -> {
 			TestEntity.init();
 			DreamEntity.init();
+			PepigEntity.init();
 		});
 	}
 
@@ -54,5 +61,6 @@ public class MeatcraftModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(TEST.get(), TestEntity.createAttributes().build());
 		event.put(DREAM.get(), DreamEntity.createAttributes().build());
+		event.put(PEPIG.get(), PepigEntity.createAttributes().build());
 	}
 }

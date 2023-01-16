@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import com.pengull.meatcraft.client.renderer.TestRenderer;
+import com.pengull.meatcraft.client.renderer.PepigRenderer;
 import com.pengull.meatcraft.client.renderer.DreamRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -21,5 +22,6 @@ public class MeatcraftModEntityRenderers {
 		event.registerEntityRenderer(MeatcraftModEntities.TEST.get(), TestRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.DREAM.get(), DreamRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.ANVIL_GUN.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.PEPIG.get(), PepigRenderer::new);
 	}
 }
