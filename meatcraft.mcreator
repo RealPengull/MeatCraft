@@ -695,6 +695,54 @@
       "locked_code": false,
       "registry_name": "godlyapple",
       "path": "~/Apple Bomb"
+    },
+    {
+      "name": "Glue",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glue"
+    },
+    {
+      "name": "HorseGlueDrop",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horse_glue_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Horsegluedroptable",
+      "type": "loottable",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horsegluedroptable"
     }
   ],
   "variable_elements": [],
@@ -783,7 +831,8 @@
       "subtitles.cartoon_throw": "",
       "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",
       "item.meatcraft.empty_jar": "Empty Jar",
-      "item.meatcraft.super_apple_bomb": "Super Apple Bomb"
+      "item.meatcraft.super_apple_bomb": "Super Apple Bomb",
+      "item.meatcraft.glue": "Glue"
     }
   },
   "foldersRoot": {
