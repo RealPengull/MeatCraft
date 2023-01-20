@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "meatcraft:raw_beef_sword"
+  },
+  "result": "meatcraft:cooked_beef_sword"
+}

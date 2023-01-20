@@ -1,0 +1,20 @@
+{
+  "_fv": 34,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:Raw_PorkAxe"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:Cooked_PorkAxe"
+    },
+    "name": "cooked_pork_axe_recipe",
+    "namespace": "mod"
+  }
+}

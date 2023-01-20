@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "meatcraft:items/cooked_mutton_sword"
+  }
+}
