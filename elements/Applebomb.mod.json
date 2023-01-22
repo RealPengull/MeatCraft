@@ -10,31 +10,31 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.TNT"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "Items.GUNPOWDER"
       },
       {
         "value": "Items.APPLE"
       },
       {
-        "value": ""
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "Items.APPLE"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "Items.APPLE"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "Items.APPLE"
+      },
+      {
+        "value": "Items.GUNPOWDER"
       }
     ],
     "recipeReturnStack": {

@@ -1232,10 +1232,10 @@
     "en_us": {
       "item.meatcraft.raw_mutton_pickaxe": "Raw_Mutton Pickaxe",
       "item.meatcraft.cumsocks_boots": "Cumsocks",
-      "item.meatcraft.cooked_pork_shovel": "Cooked_Pork Shovel",
       "item.meatcraft.defaultdance.desc": "Who wants it?",
-      "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.cooked_pork_shovel": "Cooked_Pork Shovel",
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
+      "item.meatcraft.cum_jar": "Cum Jar",
       "item.meatcraft.raw_beef_axe": "Raw_beef Axe",
       "item.meatcraft.raw_beef_shovel": "Raw_beef Shovel",
       "item.meatcraft.airpods_boots": "Airpods Boots",
@@ -1384,7 +1384,7 @@
   "workspaceSettings": {
     "modid": "meatcraft",
     "modName": "Meatcraft",
-    "version": "0.2.5",
+    "version": "0.2.0",
     "description": "A cursed modpack with dank memes and CUM.",
     "author": "Pengull, NovisRail",
     "websiteURL": "https://github.com/RealPengull/Meatcraft",

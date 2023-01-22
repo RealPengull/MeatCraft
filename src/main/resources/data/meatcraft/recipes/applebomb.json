@@ -2,10 +2,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:tnt"
+      "item": "minecraft:gunpowder"
     },
     {
       "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:gunpowder"
     }
   ],
   "result": {
