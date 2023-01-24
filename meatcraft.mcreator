@@ -1315,24 +1315,15 @@
     "name": "~",
     "children": [
       {
+        "name": "Anvil Gun",
+        "children": []
+      },
+      {
         "name": "MeatTools",
         "children": [
           {
-            "name": "Chicken",
+            "name": "Horse",
             "children": []
-          },
-          {
-            "name": "Pork",
-            "children": [
-              {
-                "name": "Raw",
-                "children": []
-              },
-              {
-                "name": "Cooked",
-                "children": []
-              }
-            ]
           },
           {
             "name": "Beef",
@@ -1348,11 +1339,7 @@
             ]
           },
           {
-            "name": "Horse",
-            "children": []
-          },
-          {
-            "name": "Mutton",
+            "name": "Pork",
             "children": [
               {
                 "name": "Raw",
@@ -1376,20 +1363,25 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Mutton",
+            "children": [
+              {
+                "name": "Cooked",
+                "children": []
+              },
+              {
+                "name": "Raw",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Chicken",
+            "children": []
           }
         ]
-      },
-      {
-        "name": "CustomCraftingGui",
-        "children": []
-      },
-      {
-        "name": "Cum",
-        "children": []
-      },
-      {
-        "name": "Anvil Gun",
-        "children": []
       },
       {
         "name": "Mobs",
@@ -1401,6 +1393,14 @@
       },
       {
         "name": "Tameable Foxes",
+        "children": []
+      },
+      {
+        "name": "CustomCraftingGui",
+        "children": []
+      },
+      {
+        "name": "Cum",
         "children": []
       }
     ]
