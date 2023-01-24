@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import com.pengull.meatcraft.entity.SuperAppleBombEntity;
 import com.pengull.meatcraft.entity.StickybombEntity;
+import com.pengull.meatcraft.entity.RedFoxEntity;
 import com.pengull.meatcraft.entity.PepigEntity;
 import com.pengull.meatcraft.entity.GodlyAppleBombEntity;
 import com.pengull.meatcraft.entity.DreamEntity;
@@ -49,6 +50,11 @@ public class MeatcraftModEntities {
 	public static final RegistryObject<EntityType<GodlyAppleBombEntity>> GODLY_APPLE_BOMB = register("projectile_godly_apple_bomb",
 			EntityType.Builder.<GodlyAppleBombEntity>of(GodlyAppleBombEntity::new, MobCategory.MISC).setCustomClientFactory(GodlyAppleBombEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RedFoxEntity>> RED_FOX = register("red_fox",
+			EntityType.Builder.<RedFoxEntity>of(RedFoxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RedFoxEntity::new)
+
+					.sized(0.6f, 1.95f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -59,6 +65,7 @@ public class MeatcraftModEntities {
 		event.enqueueWork(() -> {
 			DreamEntity.init();
 			PepigEntity.init();
+			RedFoxEntity.init();
 		});
 	}
 
@@ -66,5 +73,6 @@ public class MeatcraftModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(DREAM.get(), DreamEntity.createAttributes().build());
 		event.put(PEPIG.get(), PepigEntity.createAttributes().build());
+		event.put(RED_FOX.get(), RedFoxEntity.createAttributes().build());
 	}
 }

@@ -95,6 +95,8 @@ public class MeatcraftModItems {
 	public static final RegistryObject<Item> COOKED_PORK_AXE = REGISTRY.register("cooked_pork_axe", () -> new Cooked_PorkAxeItem());
 	public static final RegistryObject<Item> COOKED_PORK_SWORD = REGISTRY.register("cooked_pork_sword", () -> new Cooked_PorkSwordItem());
 	public static final RegistryObject<Item> COOKED_PORK_SHOVEL = REGISTRY.register("cooked_pork_shovel", () -> new Cooked_PorkShovelItem());
+	public static final RegistryObject<Item> RED_FOX = REGISTRY.register("red_fox_spawn_egg",
+			() -> new ForgeSpawnEggItem(MeatcraftModEntities.RED_FOX, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

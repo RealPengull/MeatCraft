@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import com.pengull.meatcraft.client.renderer.RedFoxRenderer;
 import com.pengull.meatcraft.client.renderer.PepigRenderer;
 import com.pengull.meatcraft.client.renderer.DreamRenderer;
 
@@ -24,5 +25,6 @@ public class MeatcraftModEntityRenderers {
 		event.registerEntityRenderer(MeatcraftModEntities.APPLEBOMB.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.SUPER_APPLE_BOMB.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(MeatcraftModEntities.GODLY_APPLE_BOMB.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(MeatcraftModEntities.RED_FOX.get(), RedFoxRenderer::new);
 	}
 }

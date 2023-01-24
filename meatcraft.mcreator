@@ -1175,6 +1175,24 @@
       "locked_code": false,
       "registry_name": "cooked_pork_shovel_recipe",
       "path": "~/MeatTools/Pork/Cooked"
+    },
+    {
+      "name": "RedFox",
+      "type": "livingentity",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_fox",
+      "path": "~/Tameable Foxes"
+    },
+    {
+      "name": "FoxInv",
+      "type": "gui",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fox_inv",
+      "path": "~/Tameable Foxes"
     }
   ],
   "variable_elements": [],
@@ -1232,10 +1250,11 @@
     "en_us": {
       "item.meatcraft.raw_mutton_pickaxe": "Raw_Mutton Pickaxe",
       "item.meatcraft.cumsocks_boots": "Cumsocks",
-      "item.meatcraft.cooked_pork_shovel": "Cooked_Pork Shovel",
       "item.meatcraft.defaultdance.desc": "Who wants it?",
-      "item.meatcraft.cum_jar": "Cum Jar",
+      "item.meatcraft.cooked_pork_shovel": "Cooked_Pork Shovel",
+      "entity.meatcraft.red_fox": "Red Fox",
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
+      "item.meatcraft.cum_jar": "Cum Jar",
       "item.meatcraft.raw_beef_axe": "Raw_beef Axe",
       "item.meatcraft.raw_beef_shovel": "Raw_beef Shovel",
       "item.meatcraft.airpods_boots": "Airpods Boots",
@@ -1272,6 +1291,7 @@
       "item.meatcraft.raw_mutton_sword": "Raw_Mutton Sword",
       "block.meatcraft.meat_table": "Meat Table",
       "entity.meatcraft.dream": "Dream",
+      "item.meatcraft.red_fox_spawn_egg": "Red Fox Spawn Egg",
       "item.meatcraft.pepig_spawn_egg": "Pepig Spawn Egg",
       "item.meatcraft.cooked_pork_pickaxe": "Cooked_Pork Pickaxe",
       "subtitles.fortnite_default_dance": "We like Fortnite!",
@@ -1377,6 +1397,10 @@
       },
       {
         "name": "Apple Bomb",
+        "children": []
+      },
+      {
+        "name": "Tameable Foxes",
         "children": []
       }
     ]
