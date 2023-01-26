@@ -17,10 +17,6 @@ import net.minecraft.world.item.BlockItem;
 import com.pengull.meatcraft.item.Test1Item;
 import com.pengull.meatcraft.item.SuperAppleBombItem;
 import com.pengull.meatcraft.item.StickybombItem;
-import com.pengull.meatcraft.item.Raw_beefSwordItem;
-import com.pengull.meatcraft.item.Raw_beefShovelItem;
-import com.pengull.meatcraft.item.Raw_beefPickaxeItem;
-import com.pengull.meatcraft.item.Raw_beefAxeItem;
 import com.pengull.meatcraft.item.Raw_PorkSwordItem;
 import com.pengull.meatcraft.item.Raw_PorkShovelItem;
 import com.pengull.meatcraft.item.Raw_PorkPickaxeItem;
@@ -29,6 +25,10 @@ import com.pengull.meatcraft.item.Raw_MuttonSwordItem;
 import com.pengull.meatcraft.item.Raw_MuttonShovelItem;
 import com.pengull.meatcraft.item.Raw_MuttonPickaxeItem;
 import com.pengull.meatcraft.item.Raw_MuttonAxeItem;
+import com.pengull.meatcraft.item.RawBeefSwordItem;
+import com.pengull.meatcraft.item.RawBeefShovelItem;
+import com.pengull.meatcraft.item.RawBeefPickaxeItem;
+import com.pengull.meatcraft.item.RawBeefAxeItem;
 import com.pengull.meatcraft.item.GodlyAppleBombItem;
 import com.pengull.meatcraft.item.GlueItem;
 import com.pengull.meatcraft.item.EmptyJarItem;
@@ -75,10 +75,6 @@ public class MeatcraftModItems {
 	public static final RegistryObject<Item> RAW_PORK_AXE = REGISTRY.register("raw_pork_axe", () -> new Raw_PorkAxeItem());
 	public static final RegistryObject<Item> RAW_PORK_SWORD = REGISTRY.register("raw_pork_sword", () -> new Raw_PorkSwordItem());
 	public static final RegistryObject<Item> RAW_PORK_SHOVEL = REGISTRY.register("raw_pork_shovel", () -> new Raw_PorkShovelItem());
-	public static final RegistryObject<Item> RAW_BEEF_PICKAXE = REGISTRY.register("raw_beef_pickaxe", () -> new Raw_beefPickaxeItem());
-	public static final RegistryObject<Item> RAW_BEEF_AXE = REGISTRY.register("raw_beef_axe", () -> new Raw_beefAxeItem());
-	public static final RegistryObject<Item> RAW_BEEF_SWORD = REGISTRY.register("raw_beef_sword", () -> new Raw_beefSwordItem());
-	public static final RegistryObject<Item> RAW_BEEF_SHOVEL = REGISTRY.register("raw_beef_shovel", () -> new Raw_beefShovelItem());
 	public static final RegistryObject<Item> RAW_MUTTON_PICKAXE = REGISTRY.register("raw_mutton_pickaxe", () -> new Raw_MuttonPickaxeItem());
 	public static final RegistryObject<Item> RAW_MUTTON_AXE = REGISTRY.register("raw_mutton_axe", () -> new Raw_MuttonAxeItem());
 	public static final RegistryObject<Item> RAW_MUTTON_SWORD = REGISTRY.register("raw_mutton_sword", () -> new Raw_MuttonSwordItem());
@@ -97,6 +93,10 @@ public class MeatcraftModItems {
 	public static final RegistryObject<Item> COOKED_PORK_SHOVEL = REGISTRY.register("cooked_pork_shovel", () -> new Cooked_PorkShovelItem());
 	public static final RegistryObject<Item> RED_FOX = REGISTRY.register("red_fox_spawn_egg",
 			() -> new ForgeSpawnEggItem(MeatcraftModEntities.RED_FOX, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> RAW_BEEF_PICKAXE = REGISTRY.register("raw_beef_pickaxe", () -> new RawBeefPickaxeItem());
+	public static final RegistryObject<Item> RAW_BEEF_SHOVEL = REGISTRY.register("raw_beef_shovel", () -> new RawBeefShovelItem());
+	public static final RegistryObject<Item> RAW_BEEF_SWORD = REGISTRY.register("raw_beef_sword", () -> new RawBeefSwordItem());
+	public static final RegistryObject<Item> RAW_BEEF_AXE = REGISTRY.register("raw_beef_axe", () -> new RawBeefAxeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

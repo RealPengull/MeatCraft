@@ -9,7 +9,7 @@
     "group": "",
     "recipeShapeless": false,
     "smokingInputStack": {
-      "value": "CUSTOM:Raw_beefSword"
+      "value": "CUSTOM:RawBeefSword"
     },
     "smokingReturnStack": {
       "value": "CUSTOM:Cooked_BeefSword"

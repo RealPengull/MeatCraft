@@ -8,7 +8,7 @@
     "name": "Cooked_Beef Shovel",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Meatcraft"
     },
     "toolType": "Spade",
     "harvestLevel": 2,

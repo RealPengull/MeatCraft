@@ -7,7 +7,8 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+
+import com.pengull.meatcraft.init.MeatcraftModTabs;
 
 public class Cooked_BeefSwordItem extends SwordItem {
 	public Cooked_BeefSwordItem() {
@@ -35,6 +36,6 @@ public class Cooked_BeefSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.COOKED_BEEF));
 			}
-		}, 3, -3f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+		}, 3, -3f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
 	}
 }

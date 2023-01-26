@@ -817,42 +817,6 @@
       "path": "~/MeatTools/Pork/Raw"
     },
     {
-      "name": "Raw_beefPickaxe",
-      "type": "tool",
-      "sortid": 73,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_beef_pickaxe",
-      "path": "~/MeatTools/Beef/Raw"
-    },
-    {
-      "name": "Raw_beefAxe",
-      "type": "tool",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_beef_axe",
-      "path": "~/MeatTools/Beef/Raw"
-    },
-    {
-      "name": "Raw_beefSword",
-      "type": "tool",
-      "sortid": 75,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_beef_sword",
-      "path": "~/MeatTools/Beef/Raw"
-    },
-    {
-      "name": "Raw_beefShovel",
-      "type": "tool",
-      "sortid": 76,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "raw_beef_shovel",
-      "path": "~/MeatTools/Beef/Raw"
-    },
-    {
       "name": "Raw_beefPickaxeRecipe",
       "type": "recipe",
       "sortid": 78,
@@ -1193,6 +1157,42 @@
       "locked_code": false,
       "registry_name": "fox_inv",
       "path": "~/Tameable Foxes"
+    },
+    {
+      "name": "RawBeefPickaxe",
+      "type": "item",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_beef_pickaxe",
+      "path": "~/MeatTools/Beef/Raw"
+    },
+    {
+      "name": "RawBeefShovel",
+      "type": "item",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_beef_shovel",
+      "path": "~/MeatTools/Beef/Raw"
+    },
+    {
+      "name": "RawBeefSword",
+      "type": "item",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_beef_sword",
+      "path": "~/MeatTools/Beef/Raw"
+    },
+    {
+      "name": "RawBeefAxe",
+      "type": "item",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_beef_axe",
+      "path": "~/MeatTools/Beef/Raw"
     }
   ],
   "variable_elements": [],
@@ -1250,13 +1250,11 @@
     "en_us": {
       "item.meatcraft.raw_mutton_pickaxe": "Raw_Mutton Pickaxe",
       "item.meatcraft.cumsocks_boots": "Cumsocks",
-      "item.meatcraft.defaultdance.desc": "Who wants it?",
       "item.meatcraft.cooked_pork_shovel": "Cooked_Pork Shovel",
+      "item.meatcraft.defaultdance.desc": "Who wants it?",
       "entity.meatcraft.red_fox": "Red Fox",
       "item.meatcraft.cumsocks_leggings": "Cumsocks Leggings",
       "item.meatcraft.cum_jar": "Cum Jar",
-      "item.meatcraft.raw_beef_axe": "Raw_beef Axe",
-      "item.meatcraft.raw_beef_shovel": "Raw_beef Shovel",
       "item.meatcraft.airpods_boots": "Airpods Boots",
       "advancements.accended.descr": "Drink cum",
       "item.meatcraft.cooked_beef_pickaxe": "Cooked_Beef Pickaxe",
@@ -1278,7 +1276,6 @@
       "item.meatcraft.cooked_beef_axe": "Cooked_Beef Axe",
       "item.meatcraft.empty_jar": "Empty Jar",
       "item.meatcraft.super_apple_bomb": "Super Apple Bomb",
-      "item.meatcraft.raw_beef_pickaxe": "Raw_beef Pickaxe",
       "item.meatcraft.cooked_mutton_shovel": "Cooked_mutton Shovel",
       "item.meatcraft.glue": "Glue",
       "item.meatcraft.raw_pork_shovel": "Raw_Pork Shovel",
@@ -1303,7 +1300,7 @@
       "item.meatcraft.anvil_gun": "Anvil Gun",
       "item.meatcraft.raw_pork_sword": "Raw_Pork Sword",
       "advancements.accended.title": "Accended",
-      "item.meatcraft.raw_beef_sword": "Raw_beef Sword",
+      "item.meatcraft.raw_beef_sword": "Raw Beef Sword",
       "item.meatcraft.godly_apple_bomb": "Godly Apple Bomb",
       "subtitles.cartoon_throw": "",
       "item.meatcraft.cooked_chick_axe": "Cooked Chick Axe",

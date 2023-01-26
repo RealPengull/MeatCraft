@@ -1,5 +1,5 @@
 {
-  "parent": "item/handheld",
+  "parent": "item/generated",
   "textures": {
     "layer0": "meatcraft:items/raw_beef_sword"
   }

@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "meatcraft:items/raw_beef_shovel"
-  }
-}

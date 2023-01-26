@@ -9,7 +9,7 @@
     "group": "",
     "recipeShapeless": false,
     "smokingInputStack": {
-      "value": "CUSTOM:Raw_beefPickaxe"
+      "value": "CUSTOM:RawBeefPickaxe"
     },
     "smokingReturnStack": {
       "value": "CUSTOM:Cooked_BeefPickaxe"

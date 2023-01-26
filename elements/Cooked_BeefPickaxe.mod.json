@@ -8,7 +8,7 @@
     "name": "Cooked_Beef Pickaxe",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Meatcraft"
     },
     "toolType": "Pickaxe",
     "harvestLevel": 2,

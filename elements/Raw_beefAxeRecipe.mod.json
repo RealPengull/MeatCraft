@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Raw_beefAxe"
+      "value": "CUSTOM:RawBeefAxe"
     },
     "name": "raw_beef_axe_recipe",
     "namespace": "mod"

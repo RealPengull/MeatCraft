@@ -8,7 +8,7 @@
     "name": "Cooked_Beef Axe",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Meatcraft"
     },
     "toolType": "Axe",
     "harvestLevel": 2,

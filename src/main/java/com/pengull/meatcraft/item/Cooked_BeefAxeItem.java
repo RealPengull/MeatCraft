@@ -6,8 +6,9 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.AxeItem;
+
+import com.pengull.meatcraft.init.MeatcraftModTabs;
 
 public class Cooked_BeefAxeItem extends AxeItem {
 	public Cooked_BeefAxeItem() {
@@ -35,6 +36,6 @@ public class Cooked_BeefAxeItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.COOKED_BEEF));
 			}
-		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
+		}, 1, -3f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
 	}
 }

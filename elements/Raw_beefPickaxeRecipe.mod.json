@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Raw_beefPickaxe"
+      "value": "CUSTOM:RawBeefPickaxe"
     },
     "name": "raw_beef_pickaxe_recipe",
     "namespace": "mod"

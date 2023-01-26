@@ -7,7 +7,8 @@ import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+
+import com.pengull.meatcraft.init.MeatcraftModTabs;
 
 public class Cooked_BeefShovelItem extends ShovelItem {
 	public Cooked_BeefShovelItem() {
@@ -35,6 +36,6 @@ public class Cooked_BeefShovelItem extends ShovelItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.COOKED_BEEF));
 			}
-		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
+		}, 1, -3f, new Item.Properties().tab(MeatcraftModTabs.TAB_MEATCRAFT));
 	}
 }

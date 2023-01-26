@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Raw_beefShovel"
+      "value": "CUSTOM:RawBeefShovel"
     },
     "name": "raw_beef_shovel_recipe",
     "namespace": "mod"
